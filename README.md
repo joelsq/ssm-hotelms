@@ -40,13 +40,14 @@ p:password="root"
 - Apply->Run
 - 留意Console信息，jetty是否运行成功
 - 浏览器输入 http://localhost:8090/hotelms/index.html
-可以看到一个简单的登录框
-输入用户名：admin
-密码：123456
+
+> 用户名：admin
+  密码：123456
+
 **注**：如果端口发生冲突，在jetty运行的console应该可以看到报错，注意看。
 
-## 到此项目测试完毕。
+### 到此项目测试完毕。
 
 # 致谢
 - 网上的Blog
-- @Yolanda-lyz的ssm教学模板提供
+- [@Yolanda-lyz](https://github.com/Yolanda-lyz)的ssm教学模板提供
