@@ -3,8 +3,8 @@
 ## 项目描述
    基于ssm的简单酒店管理系统，将会实现最基本的酒店订房和客房管理等，尽可能完善和开发其他功能。
   
-## 环境
-   win8.1, eclipse, java 8, maven3, spring4, jetty
+## 开发环境
+   win8, java 8, MySQL5.7, maven3, spring4, jetty, eclipse
 
 ## 0.Maven 参考资料
 - [Maven的安装、配置和使用入门](http://www.cnblogs.com/dcba1112/archive/2011/05/01/2033805.html)
@@ -48,7 +48,8 @@ p:password="root"
 
 **注**：如果端口发生冲突，在jetty运行的console应该可以看到报错，注意看。
 
-### 到此项目测试完毕。
+#### 到此项目测试完毕。
+---
 
 # 致谢
 - 网上的Blog
