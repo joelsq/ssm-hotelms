@@ -21,7 +21,8 @@
 	<!-- 注意修改自己数据库的username和password -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close" p:driverClassName="com.mysql.jdbc.Driver"
-		p:url="jdbc:mysql://localhost:3306/hotel" p:username="root"
+		p:url="jdbc:mysql://localhost:3306/hotel" 
+		p:username="root"
 		p:password="root" />
 
 	<!-- 配置Jdbc模板 -->

@@ -7,6 +7,7 @@
 username=
 password=
 
+
 【2】测试地址
 http://localhost:8090/hotelms/index.html
 可以看到一个简单的登录框
