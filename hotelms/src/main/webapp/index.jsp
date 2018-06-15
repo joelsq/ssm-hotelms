@@ -9,19 +9,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <base href="<%=basePath%>">
 
-<title>My JSP 'index.jsp' starting page</title>
+<title>Smart Hotel 欢迎页面</title>
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-<meta http-equiv="description" content="This is my page">
+<meta http-equiv="description" content="Home page of Hotel">
 <!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 </head>
 
 <body>
-	This is my JSP page.
+	这个页面应为酒店管理系统的首页，展示酒店，搜索房间，有用户登录，管理员登录入口
 	<br>
 </body>
 </html>

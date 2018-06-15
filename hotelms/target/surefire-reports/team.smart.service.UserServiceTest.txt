@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: team.smart.service.UserServiceTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.607 sec - in team.smart.service.UserServiceTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.658 sec - in team.smart.service.UserServiceTest
