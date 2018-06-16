@@ -3,9 +3,9 @@
 ## 项目描述
    基于ssm的简单酒店管理系统，将会实现最基本的酒店订房和客房管理等，尽可能完善和开发其他功能。
   
-## 开发环境
-   win8, java 8, MySQL5.7, maven3, spring4, jetty, eclipse
-
+### 开发环境
+   win8, java 8, MySQL5.7, eclipse, maven3, spring4, jetty, Mybaits3
+   
 ## 0.Maven 参考资料
 - [Maven的安装、配置和使用入门](http://www.cnblogs.com/dcba1112/archive/2011/05/01/2033805.html)
 - [使用eclipse + maven一步步搭建SSM框架教程详解](http://www.jb51.net/article/127829.htm)
@@ -52,7 +52,9 @@ p:password="root"
 
 #### 到此项目测试完毕。
 ---
-
+#### 注
+maven项目还有很多不懂的地方，有可能出现eclipse显示报错，但是能够正常运行。
+   
 # 致谢
 - 网上的Blog
 - [@Yolanda-lyz](https://github.com/Yolanda-lyz)的ssm教学模板提供
