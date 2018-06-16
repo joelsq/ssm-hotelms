@@ -1,0 +1,15 @@
+@charset "UTF-8";
+body {
+	/*background: url(../../../media/images/???.png);*/
+	background-size : cover;
+	background-position: center;
+	/* background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;*/
+	background-attachment: fixed;
+	
+}
+
+#checkCodeImg:hover {
+	cursor: pointer;
+}

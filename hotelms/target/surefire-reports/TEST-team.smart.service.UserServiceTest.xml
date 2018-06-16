@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="team.smart.service.UserServiceTest" time="0.422" tests="3" errors="0" skipped="0" failures="0">
+<testsuite name="team.smart.service.UserServiceTest" time="0.553" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="E:\JavaSE\jre\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 8.1"/>
-    <property name="classworlds.conf" value="D:\Projects\eclipseWorkspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6225686868064076858.tmp"/>
+    <property name="classworlds.conf" value="D:\Projects\eclipseWorkspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2185982954052278544.tmp"/>
     <property name="sun.jnu.encoding" value="GBK"/>
     <property name="java.library.path" value="E:\JavaSE\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;E:/JavaSE/bin/../jre/bin/server;E:/JavaSE/bin/../jre/bin;E:/JavaSE/bin/../jre/lib/amd64;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;E:\python36\Scripts\;E:\python36\;E:\python27;E:\python27\Scripts;E:\JavaSE\bin;E:\JavaSE\jre\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\windows\system32;E:\apache-maven-3.5.2\bin;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;E:\PHP7.2;C:\ProgramData\ComposerSetup\bin;C:\Program Files\dotnet\;E:\BitviseSSHClient;C:\Users\Xingbang\AppData\Roaming\Composer\vendor\bin;C:\Users\Xingbang\AppData\Local\GitHubDesktop\bin;E:\Visual Stdio 2017\VC\Tools\MSVC\14.11.25503\bin\Hostx86\x86;E:\Visual Stdio 2017\Common7\IDE;E:\apache-maven-3.5.2;\bin;E:\Tesseract-OCR;E:\eclipse EE\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,7 +60,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testHasMatchUser" classname="team.smart.service.UserServiceTest" time="0.062"/>
-  <testcase name="testAddLoginLog" classname="team.smart.service.UserServiceTest" time="0.094"/>
-  <testcase name="testFindUserByUserName" classname="team.smart.service.UserServiceTest" time="0.266"/>
+  <testcase name="testHasMatchUser" classname="team.smart.service.UserServiceTest" time="0.075"/>
+  <testcase name="testAddLoginLog" classname="team.smart.service.UserServiceTest" time="0.2"/>
+  <testcase name="testFindUserByUserName" classname="team.smart.service.UserServiceTest" time="0.278"/>
 </testsuite>

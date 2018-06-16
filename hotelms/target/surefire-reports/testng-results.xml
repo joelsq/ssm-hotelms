@@ -2,42 +2,20 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="1796" started-at="2018-06-15T13:06:39Z" finished-at="2018-06-15T13:06:41Z">
+  <suite name="Surefire suite" duration-ms="1673" started-at="2018-06-16T05:24:12Z" finished-at="2018-06-16T05:24:14Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="1796" started-at="2018-06-15T13:06:39Z" finished-at="2018-06-15T13:06:41Z">
+    <test name="Surefire test" duration-ms="1673" started-at="2018-06-16T05:24:12Z" finished-at="2018-06-16T05:24:14Z">
       <class name="team.smart.service.UserServiceTest">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="34" started-at="2018-06-15T21:06:39Z" finished-at="2018-06-15T21:06:39Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2018-06-16T13:24:12Z" finished-at="2018-06-16T13:24:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="1135" started-at="2018-06-15T21:06:39Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-06-15T21:06:40Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="1061" started-at="2018-06-16T13:24:12Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2018-06-16T13:24:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="297" started-at="2018-06-15T21:06:40Z" finished-at="2018-06-15T21:06:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void team.smart.service.UserServiceTest.testAddLoginLog()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="297" started-at="2018-06-15T21:06:40Z" finished-at="2018-06-15T21:06:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void team.smart.service.UserServiceTest.testHasMatchUser()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="315" started-at="2018-06-15T21:06:40Z" finished-at="2018-06-15T21:06:41Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="299" started-at="2018-06-16T13:24:13Z" finished-at="2018-06-16T13:24:13Z">
           <params>
             <param index="0">
               <value>
@@ -48,19 +26,41 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="testHasMatchUser()[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="testHasMatchUser" duration-ms="80" started-at="2018-06-15T21:06:41Z" finished-at="2018-06-15T21:06:41Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="299" started-at="2018-06-16T13:24:13Z" finished-at="2018-06-16T13:24:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void team.smart.service.UserServiceTest.testHasMatchUser()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="299" started-at="2018-06-16T13:24:13Z" finished-at="2018-06-16T13:24:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void team.smart.service.UserServiceTest.testAddLoginLog()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="testHasMatchUser()[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="testHasMatchUser" duration-ms="91" started-at="2018-06-16T13:24:13Z" finished-at="2018-06-16T13:24:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHasMatchUser -->
-        <test-method status="PASS" signature="testAddLoginLog()[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="testAddLoginLog" duration-ms="112" started-at="2018-06-15T21:06:41Z" finished-at="2018-06-15T21:06:41Z">
+        <test-method status="PASS" signature="testAddLoginLog()[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="testAddLoginLog" duration-ms="216" started-at="2018-06-16T13:24:13Z" finished-at="2018-06-16T13:24:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddLoginLog -->
-        <test-method status="PASS" signature="testFindUserByUserName()[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="testFindUserByUserName" duration-ms="266" started-at="2018-06-15T21:06:41Z" finished-at="2018-06-15T21:06:41Z">
+        <test-method status="PASS" signature="testFindUserByUserName()[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="testFindUserByUserName" duration-ms="294" started-at="2018-06-16T13:24:13Z" finished-at="2018-06-16T13:24:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindUserByUserName -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="16" started-at="2018-06-15T21:06:41Z" finished-at="2018-06-15T21:06:41Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-16T13:24:14Z" finished-at="2018-06-16T13:24:14Z">
           <params>
             <param index="0">
               <value>
@@ -71,7 +71,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="16" started-at="2018-06-15T21:06:41Z" finished-at="2018-06-15T21:06:41Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="15" started-at="2018-06-16T13:24:14Z" finished-at="2018-06-16T13:24:14Z">
           <params>
             <param index="0">
               <value>
@@ -82,7 +82,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="15" started-at="2018-06-15T21:06:41Z" finished-at="2018-06-15T21:06:41Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2018-06-16T13:24:14Z" finished-at="2018-06-16T13:24:14Z">
           <params>
             <param index="0">
               <value>
@@ -93,7 +93,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-06-15T21:06:41Z" finished-at="2018-06-15T21:06:41Z">
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:team.smart.service.UserServiceTest@1f36e637]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2018-06-16T13:24:14Z" finished-at="2018-06-16T13:24:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->

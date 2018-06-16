@@ -8,5 +8,6 @@
 <title>酒店管理系统</title>
 </head>
 <body>${user.userName},测试成功。欢迎您进入酒店管理系统，您当前积分为${user.credits};
+<h2>这里应该是酒店管理人员或者客户的页面，不同权限的逻辑判断还没做</h2>
 </body>
 </html>
