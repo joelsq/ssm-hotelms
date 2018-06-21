@@ -4,7 +4,7 @@
    基于ssm的简单酒店管理系统，将会实现最基本的酒店订房和客房管理等，尽可能完善和开发其他功能。
   
 ### 开发环境
-   win8, java 8, MySQL5.7, eclipse, maven3, spring4, jetty, Mybaits3
+   win8, java 8, MySQL5.7, eclipse, maven3, spring4, jetty
    
 ## 0.Maven 参考资料
 - [Maven的安装、配置和使用入门](http://www.cnblogs.com/dcba1112/archive/2011/05/01/2033805.html)
