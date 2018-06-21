@@ -30,6 +30,7 @@
 					<li><a href="#">酒店简介</a></li>
 					<li><a href="#">客房信息</a></li>
 					<li class="nav navbar-nav navbar-right"><a href="index.html">登录</a></li>
+					
 				</ul>
 				<div>
 					<form role="form" class="form-inline">
@@ -41,7 +42,7 @@
 							<label for="InputDays">入住天数</label><input type="text"
 								class="form-control" id="exampleInputPassword1" />
 						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
+						<button type="submit" class="btn btn-default">查询</button>
 					</form>
 				</div>
 				<div class="carousel slide" id="carousel-571727">

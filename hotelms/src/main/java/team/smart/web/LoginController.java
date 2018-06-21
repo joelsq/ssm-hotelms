@@ -26,7 +26,7 @@ public class LoginController{
 		boolean isValidUser =  userService.hasMatchUser(loginCommand.getUserName(),
 					                    loginCommand.getPassword());
 		if (!isValidUser) {
-			return new ModelAndView("login", "error", "用户名或密码错误。");
+			return new ModelAndView("login", "error", "用户名或密码错误。");//传回login.jsp的c:if判断
 		} else {
 			User user = userService.findUserByUserName(loginCommand
 					.getUserName());

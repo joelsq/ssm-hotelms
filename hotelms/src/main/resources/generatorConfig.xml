@@ -42,7 +42,7 @@
 		</javaClientGenerator>
 
 		<!-- 指定数据库表 -->
-		<table schema="hotel" tableName="guest" domainObjectName="Guest"
+		<table schema="hotel" tableName="admin" domainObjectName="Admin"
 			enableCountByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" enableUpdateByExample="false">
 			<!-- 忽略列，不生成bean 字段 -->

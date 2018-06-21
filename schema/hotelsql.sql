@@ -16,6 +16,26 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`hotel` /*!40100 DEFAULT CHARACTER SET u
 
 USE `hotel`;
 
+/*Table structure for table `admin` */
+
+DROP TABLE IF EXISTS `admin`;
+
+CREATE TABLE `admin` (
+  `admin_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '酒店人员账号',
+  `admin_name` varchar(30) DEFAULT NULL COMMENT '酒店人员姓名',
+  `admin_pw` varchar(32) DEFAULT NULL COMMENT '酒店人员登录密码',
+  `admin_au` varchar(32) DEFAULT NULL COMMENT '酒店人员权限',
+  `admin_last_visit` datetime DEFAULT NULL COMMENT '酒店人员最近登录时间',
+  `admin_last_ip` varchar(23) DEFAULT NULL COMMENT '酒店人员最近登录ip',
+  PRIMARY KEY (`admin_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+/*Data for the table `admin` */
+
+insert  into `admin`(`admin_id`,`admin_name`,`admin_pw`,`admin_au`,`admin_last_visit`,`admin_last_ip`) values 
+(1001,'admin','123456','admin',NULL,NULL),
+(1002,'manager','123','mamager',NULL,NULL);
+
 /*Table structure for table `checklist` */
 
 DROP TABLE IF EXISTS `checklist`;
@@ -35,7 +55,6 @@ CREATE TABLE `checklist` (
   PRIMARY KEY (`checklist_id`),
   KEY `guest_id` (`guest_id`),
   KEY `room_id` (`room_id`),
-  CONSTRAINT `checklist_ibfk_1` FOREIGN KEY (`guest_id`) REFERENCES `guest` (`guest_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `checklist_ibfk_2` FOREIGN KEY (`room_id`) REFERENCES `room` (`room_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -59,13 +78,15 @@ CREATE TABLE `financial_report` (
 DROP TABLE IF EXISTS `guest`;
 
 CREATE TABLE `guest` (
-  `guest_id` smallint(5) NOT NULL COMMENT '客人编号',
-  `guest_phone` varchar(30) NOT NULL COMMENT '客人手机号',
+  `guest_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '客人编号',
+  `guest_name` varchar(30) DEFAULT NULL COMMENT '客人姓名',
+  `guest_phone` varchar(30) DEFAULT NULL COMMENT '客人手机号',
   `guest_password` varchar(30) DEFAULT NULL COMMENT '客人登录密码',
   `guest_document_num` varchar(30) DEFAULT NULL COMMENT '客人证件号',
-  `guest_name` varchar(30) DEFAULT NULL COMMENT '客人姓名',
   `guest_gender` varchar(10) DEFAULT NULL COMMENT '客人性别',
-  PRIMARY KEY (`guest_id`,`guest_phone`)
+  `guset_last_visit` datetime DEFAULT NULL COMMENT '客人最近登录时间',
+  `guset_last_ip` varchar(23) DEFAULT NULL COMMENT '客人最近登录ip',
+  PRIMARY KEY (`guest_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `guest` */
@@ -80,9 +101,24 @@ CREATE TABLE `login_log` (
   `ip` varchar(23) DEFAULT NULL,
   `login_datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`login_log_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 /*Data for the table `login_log` */
+
+insert  into `login_log`(`login_log_id`,`user_id`,`ip`,`login_datetime`) values 
+(5,1002,'0:0:0:0:0:0:0:1','2018-06-02 21:44:37'),
+(7,1002,'0:0:0:0:0:0:0:1','2018-06-02 21:48:48'),
+(8,1002,'0:0:0:0:0:0:0:1','2018-06-02 21:49:56'),
+(9,1002,'0:0:0:0:0:0:0:1','2018-06-02 21:50:00'),
+(12,1002,'0:0:0:0:0:0:0:1','2018-06-03 21:16:06'),
+(13,1002,'0:0:0:0:0:0:0:1','2018-06-15 20:16:55'),
+(16,1002,'0:0:0:0:0:0:0:1','2018-06-15 21:06:55'),
+(17,1002,'0:0:0:0:0:0:0:1','2018-06-15 21:06:57'),
+(18,1002,'0:0:0:0:0:0:0:1','2018-06-16 13:54:01'),
+(19,1002,'0:0:0:0:0:0:0:1','2018-06-16 14:11:01'),
+(20,1002,'0:0:0:0:0:0:0:1','2018-06-21 09:43:14'),
+(21,1002,'0:0:0:0:0:0:0:1','2018-06-21 10:13:05'),
+(22,1002,'0:0:0:0:0:0:0:1','2018-06-21 11:24:36');
 
 /*Table structure for table `room` */
 
@@ -135,12 +171,13 @@ CREATE TABLE `user` (
   `last_visit` datetime DEFAULT NULL COMMENT '最近登录时间',
   `last_ip` varchar(23) COLLATE utf8_esperanto_ci DEFAULT NULL COMMENT '最近登录ip',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1003 DEFAULT CHARSET=utf8 COLLATE=utf8_esperanto_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1004 DEFAULT CHARSET=utf8 COLLATE=utf8_esperanto_ci;
 
 /*Data for the table `user` */
 
 insert  into `user`(`user_id`,`user_name`,`password`,`credits`,`authority`,`last_visit`,`last_ip`) values 
-(1002,'admin','123456',NULL,NULL,NULL,NULL);
+(1002,'admin','123456',5,'admin','2018-06-21 11:24:36','0:0:0:0:0:0:0:1'),
+(1003,'guest','123',NULL,'guest',NULL,NULL);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
