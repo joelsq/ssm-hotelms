@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="team.smart.dao.AdminMapper">
+	<resultMap id="BaseResultMap" type="team.smart.domain.Admin">
+		<id column="admin_id" jdbcType="INTEGER" property="adminId" />
+		<result column="admin_name" jdbcType="VARCHAR" property="adminName" />
+		<result column="admin_pw" jdbcType="VARCHAR" property="adminPw" />
+		<result column="admin_au" jdbcType="VARCHAR" property="adminAu" />
+		<result column="admin_last_visit" jdbcType="TIMESTAMP"
+			property="adminLastVisit" />
+		<result column="admin_last_ip" jdbcType="VARCHAR" property="adminLastIp" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		admin_id, admin_name, admin_pw, admin_au, admin_last_visit, admin_last_ip
+	</sql>
+	<select id="selectByPrimaryKey" parameterType="java.lang.Integer"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from admin
+		where admin_id = #{adminId,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from admin
+		where admin_id = #{adminId,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="team.smart.domain.Admin">
+		insert into admin (admin_id, admin_name, admin_pw,
+		admin_au, admin_last_visit, admin_last_ip
+		)
+		values (#{adminId,jdbcType=INTEGER}, #{adminName,jdbcType=VARCHAR},
+		#{adminPw,jdbcType=VARCHAR},
+		#{adminAu,jdbcType=VARCHAR}, #{adminLastVisit,jdbcType=TIMESTAMP}, #{adminLastIp,jdbcType=VARCHAR}
+		)
+	</insert>
+	<insert id="insertSelective" parameterType="team.smart.domain.Admin">
+		insert into admin
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="adminId != null">
+				admin_id,
+			</if>
+			<if test="adminName != null">
+				admin_name,
+			</if>
+			<if test="adminPw != null">
+				admin_pw,
+			</if>
+			<if test="adminAu != null">
+				admin_au,
+			</if>
+			<if test="adminLastVisit != null">
+				admin_last_visit,
+			</if>
+			<if test="adminLastIp != null">
+				admin_last_ip,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="adminId != null">
+				#{adminId,jdbcType=INTEGER},
+			</if>
+			<if test="adminName != null">
+				#{adminName,jdbcType=VARCHAR},
+			</if>
+			<if test="adminPw != null">
+				#{adminPw,jdbcType=VARCHAR},
+			</if>
+			<if test="adminAu != null">
+				#{adminAu,jdbcType=VARCHAR},
+			</if>
+			<if test="adminLastVisit != null">
+				#{adminLastVisit,jdbcType=TIMESTAMP},
+			</if>
+			<if test="adminLastIp != null">
+				#{adminLastIp,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="team.smart.domain.Admin">
+		update admin
+		<set>
+			<if test="adminName != null">
+				admin_name = #{adminName,jdbcType=VARCHAR},
+			</if>
+			<if test="adminPw != null">
+				admin_pw = #{adminPw,jdbcType=VARCHAR},
+			</if>
+			<if test="adminAu != null">
+				admin_au = #{adminAu,jdbcType=VARCHAR},
+			</if>
+			<if test="adminLastVisit != null">
+				admin_last_visit = #{adminLastVisit,jdbcType=TIMESTAMP},
+			</if>
+			<if test="adminLastIp != null">
+				admin_last_ip = #{adminLastIp,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where admin_id = #{adminId,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="team.smart.domain.Admin">
+		update admin
+		set admin_name = #{adminName,jdbcType=VARCHAR},
+		admin_pw = #{adminPw,jdbcType=VARCHAR},
+		admin_au = #{adminAu,jdbcType=VARCHAR},
+		admin_last_visit = #{adminLastVisit,jdbcType=TIMESTAMP},
+		admin_last_ip = #{adminLastIp,jdbcType=VARCHAR}
+		where admin_id = #{adminId,jdbcType=INTEGER}
+	</update>
+	
+	<!-- 自行添加的方法 -->
+	<!-- 按照管理员名和密码查询，返回成功数 -->
+	 <select id="loginCheck" resultType="java.lang.Integer">  
+        select count(*) 
+        from admin  
+        where admin_name=#{adminName} and admin_pw=#{password} 
+     </select>  
+</mapper>

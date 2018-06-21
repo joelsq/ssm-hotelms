@@ -1,16 +1,15 @@
-package team.smart.mapper;
+package team.smart.dao;
 
 import team.smart.domain.Guest;
-import team.smart.domain.GuestKey;
 
 public interface GuestMapper {
-    int deleteByPrimaryKey(GuestKey key);
+    int deleteByPrimaryKey(Short guestId);
 
     int insert(Guest record);
 
     int insertSelective(Guest record);
 
-    Guest selectByPrimaryKey(GuestKey key);
+    Guest selectByPrimaryKey(Short guestId);
 
     int updateByPrimaryKeySelective(Guest record);
 

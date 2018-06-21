@@ -40,13 +40,13 @@
 						<form action="<c:url value="loginCheck.html"/>" method="post"
 							class="form-horizontal" role="form">
 							<div class="form-group">
-								<label for="userName" class="col-sm-2 control-label">ID</label>
+								<label for="userName" class="col-sm-2 control-label">用户名</label>
 								<div class="col-sm-10">
 									<input type="text" class="form-control" name="userName" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="password" class="col-sm-2 control-label">Password</label>
+								<label for="password" class="col-sm-2 control-label">密码</label>
 								<div class="col-sm-10">
 									<input type="password" class="form-control" name="password" />
 								</div>

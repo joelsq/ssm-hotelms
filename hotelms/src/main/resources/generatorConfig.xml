@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!-- Mybaits 自动生成模型，mapper和dao类 -->
 <generatorConfiguration>
 	<context id="hotelms" targetRuntime="MyBatis3">
 
@@ -18,27 +19,21 @@
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 
-		<!-- targetProject:生成domain类的位置 -->
+		<!--生成Model类存放位置 -->
 		<javaModelGenerator targetPackage="team.smart.domain"
 			targetProject="hotelms/src/main/java">
-			<!-- enableSubPackages:是否让schema作为包的后缀 -->
-			<property name="enableSubPackages" value="false" />
-			<!-- 从数据库返回的值被清理前后的空格 -->
+			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
-
-		<!-- targetPackage：mapper接口生成的位置 -->
+		<!--生成映射文件存放位置 -->
 		<sqlMapGenerator targetPackage="team.smart.mapper"
-			targetProject="hotel/src/main/java">
-			<!-- enableSubPackages:是否让schema作为包的后缀 -->
-			<property name="enableSubPackages" value="false" />
+			targetProject="hotelms/src/main/java">
+			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
-
-		<!-- targetPackage：mapper接口生成的位置 -->
-		<javaClientGenerator targetPackage="team.smart.mapper"
-			targetProject="hotelms/src/main/java" type="XMLMAPPER">
-			<!-- enableSubPackages:是否让schema作为包的后缀 -->
-			<property name="enableSubPackages" value="false" />
+		<!--生成Dao类存放位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="team.smart.dao" targetProject="hotelms/src/main/java">
+			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
 		<!-- 指定数据库表 -->
@@ -46,9 +41,9 @@
 			enableCountByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" enableUpdateByExample="false">
 			<!-- 忽略列，不生成bean 字段 -->
-			<ignoreColumn column="FRED" />
+			<!--  <ignoreColumn column="FRED" />-->
 			<!-- 指定列的java数据类型 -->
-			<!-- <columnOverride column="???" property="???" /> -->
+			<!-- <columnOverride column="admin_name" property="???" /> -->
 		</table>
 	</context>
 </generatorConfiguration>

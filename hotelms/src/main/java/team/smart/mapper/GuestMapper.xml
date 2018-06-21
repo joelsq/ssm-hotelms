@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="team.smart.dao.GuestMapper">
+  <resultMap id="BaseResultMap" type="team.smart.domain.Guest">
+    <id column="guest_id" jdbcType="SMALLINT" property="guestId" />
+    <result column="guest_name" jdbcType="VARCHAR" property="guestName" />
+    <result column="guest_phone" jdbcType="VARCHAR" property="guestPhone" />
+    <result column="guest_password" jdbcType="VARCHAR" property="guestPassword" />
+    <result column="guest_document_num" jdbcType="VARCHAR" property="guestDocumentNum" />
+    <result column="guest_gender" jdbcType="VARCHAR" property="guestGender" />
+    <result column="guset_last_visit" jdbcType="TIMESTAMP" property="gusetLastVisit" />
+    <result column="guset_last_ip" jdbcType="VARCHAR" property="gusetLastIp" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    guest_id, guest_name, guest_phone, guest_password, guest_document_num, guest_gender, 
+    guset_last_visit, guset_last_ip
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Short" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from guest
+    where guest_id = #{guestId,jdbcType=SMALLINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Short">
+    delete from guest
+    where guest_id = #{guestId,jdbcType=SMALLINT}
+  </delete>
+  <insert id="insert" parameterType="team.smart.domain.Guest">
+    insert into guest (guest_id, guest_name, guest_phone, 
+      guest_password, guest_document_num, guest_gender, 
+      guset_last_visit, guset_last_ip)
+    values (#{guestId,jdbcType=SMALLINT}, #{guestName,jdbcType=VARCHAR}, #{guestPhone,jdbcType=VARCHAR}, 
+      #{guestPassword,jdbcType=VARCHAR}, #{guestDocumentNum,jdbcType=VARCHAR}, #{guestGender,jdbcType=VARCHAR}, 
+      #{gusetLastVisit,jdbcType=TIMESTAMP}, #{gusetLastIp,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="team.smart.domain.Guest">
+    insert into guest
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="guestId != null">
+        guest_id,
+      </if>
+      <if test="guestName != null">
+        guest_name,
+      </if>
+      <if test="guestPhone != null">
+        guest_phone,
+      </if>
+      <if test="guestPassword != null">
+        guest_password,
+      </if>
+      <if test="guestDocumentNum != null">
+        guest_document_num,
+      </if>
+      <if test="guestGender != null">
+        guest_gender,
+      </if>
+      <if test="gusetLastVisit != null">
+        guset_last_visit,
+      </if>
+      <if test="gusetLastIp != null">
+        guset_last_ip,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="guestId != null">
+        #{guestId,jdbcType=SMALLINT},
+      </if>
+      <if test="guestName != null">
+        #{guestName,jdbcType=VARCHAR},
+      </if>
+      <if test="guestPhone != null">
+        #{guestPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="guestPassword != null">
+        #{guestPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="guestDocumentNum != null">
+        #{guestDocumentNum,jdbcType=VARCHAR},
+      </if>
+      <if test="guestGender != null">
+        #{guestGender,jdbcType=VARCHAR},
+      </if>
+      <if test="gusetLastVisit != null">
+        #{gusetLastVisit,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gusetLastIp != null">
+        #{gusetLastIp,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="team.smart.domain.Guest">
+    update guest
+    <set>
+      <if test="guestName != null">
+        guest_name = #{guestName,jdbcType=VARCHAR},
+      </if>
+      <if test="guestPhone != null">
+        guest_phone = #{guestPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="guestPassword != null">
+        guest_password = #{guestPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="guestDocumentNum != null">
+        guest_document_num = #{guestDocumentNum,jdbcType=VARCHAR},
+      </if>
+      <if test="guestGender != null">
+        guest_gender = #{guestGender,jdbcType=VARCHAR},
+      </if>
+      <if test="gusetLastVisit != null">
+        guset_last_visit = #{gusetLastVisit,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gusetLastIp != null">
+        guset_last_ip = #{gusetLastIp,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where guest_id = #{guestId,jdbcType=SMALLINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="team.smart.domain.Guest">
+    update guest
+    set guest_name = #{guestName,jdbcType=VARCHAR},
+      guest_phone = #{guestPhone,jdbcType=VARCHAR},
+      guest_password = #{guestPassword,jdbcType=VARCHAR},
+      guest_document_num = #{guestDocumentNum,jdbcType=VARCHAR},
+      guest_gender = #{guestGender,jdbcType=VARCHAR},
+      guset_last_visit = #{gusetLastVisit,jdbcType=TIMESTAMP},
+      guset_last_ip = #{gusetLastIp,jdbcType=VARCHAR}
+    where guest_id = #{guestId,jdbcType=SMALLINT}
+  </update>
+</mapper>
