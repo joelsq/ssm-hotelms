@@ -27,12 +27,12 @@
 		</javaModelGenerator>
 		<!--生成映射文件存放位置 -->
 		<sqlMapGenerator targetPackage="team.smart.mapper"
-			targetProject="hotelms/src/main/java">
+			targetProject="hotelms/src/main/resources/mapper">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!--生成Dao类存放位置 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="team.smart.dao" targetProject="hotelms/src/main/java">
+			targetPackage="team.smart.mapper" targetProject="hotelms/src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
